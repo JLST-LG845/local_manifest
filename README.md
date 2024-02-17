@@ -1,4 +1,4 @@
-![banner](https://raw.githubusercontent.com/JLST-LG845/local_manifests/T/manifest_banner.png)
+![banner](https://raw.githubusercontent.com/JLST-LG845/local_manifests/R/manifest_banner.png)
 
 # LGE SDM845 Tree Manifest
 This is the manifest to clone the judy family device trees.
@@ -16,7 +16,7 @@ This is the manifest to clone the judy family device trees.
     * Since `local_manifests` folder is empty, the manifest stuff will be inside `.repo/local_manifests`.
     ```bash
     cd .repo
-    git clone https://github.com/JLST-LG835/local_manifests.git -b T
+    git clone https://github.com/JLST-LG835/local_manifests.git -b R
     ```
 * Then run the setup script to add the line to clone your desired device.
     * When prompted, select the number that corresponds to your device codename.
