@@ -8,7 +8,7 @@ This is the manifest to clone the judy family device trees.
 * Knowledge on how to initialize ROM source.
 * Familiarity with using [Git](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet).
 * [Setup](https://github.com/akhilnarang/scripts) build environment.
-    * For Arch users, just install [lineageOS-devel](https://aur.archlinux.org/packages/lineageos-devel) and you should be good to go.
+    * For Arch users, just install [lineageos-devel](https://aur.archlinux.org/packages/lineageos-devel) and you should be good to go.
 
 ## Instructions
 
