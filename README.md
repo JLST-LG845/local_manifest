@@ -41,4 +41,8 @@ This is the manifest to clone the judy family device trees.
     ./rom.sh
     ```
 
+## Credits
+* Thanks to [@EmanuelCN](https://github.com/EmanuelCN/) for original device trees, kernel, and vendor.
+* `rom.sh` script based on the original file by Emanuel available in his [Telegram channel](https://t.me/emhub).
+
 
