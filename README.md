@@ -17,7 +17,7 @@ This is the manifest to clone the judy family device trees.
     * Since `local_manifests` folder is empty, the manifest stuff will be inside `.repo/local_manifests`.
     ```bash
     cd .repo
-    git clone https://github.com/JLST-LG835/local_manifests.git -b T
+    git clone https://github.com/JLST-LG845/local_manifests.git -b T
     ```
 * Then run the setup script to add the line to clone your desired device.
     * When prompted, select the number that corresponds to your device codename.
