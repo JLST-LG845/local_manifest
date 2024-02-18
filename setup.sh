@@ -31,7 +31,7 @@ newline="  <project path=\"device/lge/$device\" name=\"android_device_lge_$devic
 echo -e "\nEditing XML files..."
 
 readarray -t file_lines < <(cat lge_sdm845.xml)
-echo "<?xml version="1.0" encoding="UTF-8"?>" | tee lge_sdm845.xml &> /dev/null
+echo -e "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | tee lge_sdm845.xml &> /dev/null
 for ((i = 1; i < ${#file_lines[@]}-2; i++)); do
   echo "${file_lines[$i]}" | tee -a lge_sdm845.xml &> /dev/null
 done
