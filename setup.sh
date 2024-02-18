@@ -52,7 +52,8 @@ echo -e "--------------------------------------"
 echo "Try to remove display HAL cloning from default manifests..."
 cd ../manifests
 IFS=' ' read -r -a line <<< "$(grep -nir hardware/qcom-caf/sdm845/display)"
-IFS=':' read -r -a loc_num <<< $line
+IFS=':' read -r -a loc_info <<< $line
+sed -i "${loc_info[1]}s/.*/  <!-- SDM845 YEET DISPLAY -->/" ${loc_info[0]}
 cd ../local_manifests
 
 echo "Done!"
