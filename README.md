@@ -34,13 +34,22 @@ This is the manifest to clone the judy family device trees.
 * Copy `rom.sh` to the root folder of your ROM source to change the rom prefix.
 * Run the script
     * When prompted, specify your device codename and the ROM name found inside `vendor` folder.
-        * ie. `vendor/lineage`
+        * ie. `vendor/lineage` or `vendor/evolution` etc.
     ```bash
     # Make sure it is exectuable
     chmod +x rom.sh
+    # Run the script
     ./rom.sh
     ```
-
+* Apply [this](https://github.com/Evolution-X/frameworks_base/commit/cf904d5811d36cd7993de66486a92994f8f81233) and [this](https://github.com/Evolution-X/frameworks_base/commit/382887e4864285918d4bc30195c04999b60bf459) commits to fix some errors for our devices.
+    * This includes the `internal error` message and the battery light being stuck at 100% for G7 users.
+* If your test build encounters random reboots, reference and apply [this commit](https://github.com/juleast/android_build_soong/commit/69b1f28e3f935e962b7a762b709d954e9179c5da).
+    * It is best if you add the remote from JLST-LG845 and cherry-pick it.
+        ```bash
+        git remote add other https://github.com/juleast/android_build_soong.git
+        git fetch other
+        git cherry-pick 69b1f28
+        ```
 ## Credits
 * Thanks to [@EmanuelCN](https://github.com/EmanuelCN/) for original device trees, kernel, and vendor.
 * `rom.sh` script based on the original file by Emanuel available in his [Telegram channel](https://t.me/emhub).
