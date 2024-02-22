@@ -31,7 +31,7 @@ This is the manifest to clone the judy family device trees.
 * If the script ever failed to remove the line for default display HAL, reference [this commit](https://github.com/JLST-LG845/local_manifests/commit/d51644737bda5fe6af22101c875edc5805383430).
 
 ### After sync
-* Copy `rom.sh` to the root folder of your ROM source to change the rom prefix.
+* Copy `rom.sh` to the root folder of your ROM source to change the rom prefix and clone the KernelSU submodule inside kernel source.
 * Run the script
     * When prompted, specify your device codename and the ROM name found inside `vendor` folder.
         * ie. `vendor/lineage` or `vendor/evolution` etc.
