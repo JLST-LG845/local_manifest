@@ -3,6 +3,9 @@
   <remote name="jlst"
           fetch="https://github.com/JLST-LG845"
           revision="T" />
+  
+  <remote name="github"
+          fetch="https://github.com" />
 
   <!-- Common trees -->
   <project path="hardware/lge" name="hardware_lge" remote="jlst" revision="R" />
