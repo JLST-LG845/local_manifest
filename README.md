@@ -43,9 +43,12 @@ This is the manifest to clone the judy family device trees.
     ```
 * Apply [this](https://github.com/Evolution-X/frameworks_base/commit/cf904d5811d36cd7993de66486a92994f8f81233) and [this](https://github.com/Evolution-X/frameworks_base/commit/382887e4864285918d4bc30195c04999b60bf459) commits to fix some errors for our devices.
     * This includes the `internal error` message and the battery light being stuck at 100% for G7 users.
-* If your test build encounters random reboots, reference and apply [this commit](https://github.com/juleast/android_build_soong/commit/69b1f28e3f935e962b7a762b709d954e9179c5da).
-    * It is best if you add the remote from JLST-LG845 and cherry-pick it.
+* If your test build encounters random reboots, reference and apply [this commit](https://github.com/juleast/android_build_soong/commit/69b1f28e3f935e962b7a762b709d954e9179c5da) inside `build/soong`.
+    * It is best if you add the remote from JLST-LG845 and cherry pick it.
         ```bash
+        # From the root of your ROM source
+        cd build/soong
+        # Add remote, fetch and cherry pick
         git remote add other https://github.com/juleast/android_build_soong.git
         git fetch other
         git cherry-pick 69b1f28
