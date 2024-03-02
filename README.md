@@ -19,6 +19,10 @@ This is the manifest to clone the judy family device trees.
     cd .repo
     git clone https://github.com/JLST-LG845/local_manifests.git -b U
     ```
+* Navigate to the `local_manifests` directory.
+    ```bash
+    cd local_manifests
+    ```
 * Then run the setup script to add the line to clone your desired device.
     * When prompted, select the number that corresponds to your device codename.
     * After this, the script will automatically remove the line that clones the default display HAL in the default XML file inside the manifests folder.
