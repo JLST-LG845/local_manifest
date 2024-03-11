@@ -2,10 +2,7 @@
 
 # Modify ROM prefix
 modify_rom_prefix() {
-  echo "Rom Bringup"
-  read -p "New rom prefix: " rom
-
-  echo "Performing renaming..."
+  echo "Performing renaming for ${device}..."
   cd device/lge/${device}
   find . -not -path "*/.*" -name "*.mk" -type f -exec sed -i "s/aosp/${rom}/g" {} +
   mv aosp_${device}.mk ${rom}_${device}.mk
@@ -50,6 +47,9 @@ case ${device_choice} in
     exit 1
     ;;
 esac
+
+echo "Rom Bringup"
+read -p "New rom prefix: " rom
 
 if [ "${device_choice}" == 4 ]; then
   for ((i = 0; i < ${#device_arr[@]}; i++)); do
