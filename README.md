@@ -51,8 +51,10 @@ This is the manifest to clone the judy family device trees.
 * If your test build encounters random reboots, reference and apply [this commit](https://github.com/juleast/android_build_soong/commit/69b1f28e3f935e962b7a762b709d954e9179c5da).
     * It is best if you add the remote from JLST-LG845 and cherry-pick it.
         ```bash
-        git remote add other https://github.com/juleast/android_build_soong.git
-        git fetch other
+        # From the root of your ROM source
+        cd build/soong
+        # Fetch remote and cherry pick
+        git fetch https://github.com/juleast/android_build_soong.git
         git cherry-pick 69b1f28
         ```
 ## Credits
