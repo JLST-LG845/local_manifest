@@ -7,7 +7,6 @@
   <!-- Common trees -->
   <project path="hardware/lge" name="hardware_lge" remote="jlst" />
   <project path="vendor/lge" name="proprietary_vendor_lge" remote="jlst" />
-  <project path="device/lge/common" name="android_device_lge_common" remote="jlst" />
   <project path="device/lge/sdm845-common" name="android_device_lge_sdm845-common" remote="jlst" />
 
   <!-- SDM845 Kernel -->
