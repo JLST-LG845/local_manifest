@@ -1,4 +1,6 @@
 #!/bin/bash
+hals=("hardware/qcom-caf/sdm845/audio" "hardware/qcom-caf/sdm845/display" "hardware/qcom-caf/sdm845/media")
+
 echo -e "### Mini Manifest Editor by Juleast###"
 echo -e "--------------------------------------"
 echo "Select the device:"
@@ -49,11 +51,16 @@ echo "Finished!"
 
 echo -e "--------------------------------------"
 
-echo "Try to remove display HAL cloning from default manifests..."
+echo "Try to remove SDM845 CAF HALs from default manifests..."
 cd ../manifests
-IFS=' ' read -r -a line <<< "$(grep -nir hardware/qcom-caf/sdm845/display)"
-IFS=':' read -r -a loc_info <<< $line
-sed -i "${loc_info[1]}s/.*/  <!-- SDM845 YEET DISPLAY -->/" ${loc_info[0]}
+
+for hal in ${hals[@]}; do
+  IFS='/' read -r -a name <<< "$(echo $hal)"
+  IFS=' ' read -r -a line <<< "$(grep -nir $hal)"
+  IFS=':' read -r -a loc_info <<< $line
+  sed -i "${loc_info[1]}s/.*/  <!-- SDM845 yeet ${name[-1]} -->/" ${loc_info[0]}
+done
+
 cd ../local_manifests
 
 echo "Done!"
