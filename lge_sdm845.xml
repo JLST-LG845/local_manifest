@@ -6,14 +6,16 @@
 
   <!-- Common trees -->
   <project path="hardware/lge" name="hardware_lge" remote="jlst" revision="U" />
-  <project path="vendor/lge" name="proprietary_vendor_lge" remote="jlst" revision="U" />
+  <project path="vendor/lge" name="proprietary_vendor_lge" remote="jlst" />
   <project path="device/lge/sdm845-common" name="android_device_lge_sdm845-common" remote="jlst" />
 
   <!-- SDM845 Kernel -->
   <project path="kernel/lge/sdm845" name="android_kernel_lge_sdm845" remote="jlst" revision="U" />
 
   <!-- Use custom display HAL for our common tree -->
+  <project path="hardware/qcom-caf/sdm845/audio" name="hardware_qcom-caf_sdm845_audio" remote="jlst" />
   <project path="hardware/qcom-caf/sdm845/display" name="hardware_qcom-caf_sdm845_display" remote="jlst" />
+  <project path="hardware/qcom-caf/sdm845/media" name="hardware_qcom-caf_sdm845_media" remote="jlst" />
 
   <!-- Proton clang for kernel -->
   <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang" clone-depth="1" remote="github" revision="master" />
