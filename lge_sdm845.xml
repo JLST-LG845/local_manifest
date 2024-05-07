@@ -10,9 +10,12 @@
   <project path="device/lge/sdm845-common" name="android_device_lge_sdm845-common" remote="jlst" />
 
   <!-- SDM845 Kernel -->
-  <project path="kernel/lge/sdm845" name="android_kernel_lge_sdm845" remote="jlst" />
+  <project path="kernel/lge/sdm845" name="android_kernel_lge_sdm845" remote="jlst" revision="U" />
 
-  <!-- Use custom display HAL for our common tree -->
+  <!-- Use custom HALs for our common tree -->
+  <remove-project path="hardware/qcom-caf/sdm845/audio" />
+  <remove-project path="hardware/qcom-caf/sdm845/display" />
+  <remove-project path="hardware/qcom-caf/sdm845/media" />
   <project path="hardware/qcom-caf/sdm845/audio" name="hardware_qcom-caf_sdm845_audio" remote="jlst" />
   <project path="hardware/qcom-caf/sdm845/display" name="hardware_qcom-caf_sdm845_display" remote="jlst" />
   <project path="hardware/qcom-caf/sdm845/media" name="hardware_qcom-caf_sdm845_media" remote="jlst" />
