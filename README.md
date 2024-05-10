@@ -53,8 +53,8 @@ This is the manifest to clone the judy family device trees.
         # From the root of your ROM source
         cd build/soong
         # Fetch remote and cherry pick
-        git fetch https://github.com/juleast/android_build_soong.git
-        git cherry-pick 69b1f28
+        git fetch https://github.com/juleast/android_build_soong.git 69b1f28e3f935e962b7a762b709d954e9179c5da
+        git cherry-pick FETCH_HEAD
         ```
 ## Credits
 * Thanks to [@EmanuelCN](https://github.com/EmanuelCN/) for original device trees, kernel, and vendor.
