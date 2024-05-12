@@ -1,6 +1,22 @@
 #!/bin/bash
 hals=("hardware/qcom-caf/sdm845/audio" "hardware/qcom-caf/sdm845/display" "hardware/qcom-caf/sdm845/media")
 
+nuke_hal() {
+  echo -e "--------------------------------------"
+
+  echo "Try to remove SDM845 CAF HALs from default manifests..."
+  cd ../manifests
+
+  for hal in ${hals[@]}; do
+    IFS='/' read -r -a name <<< "$(echo $hal)"
+    IFS=' ' read -r -a line <<< "$(grep -nir $hal)"
+    IFS=':' read -r -a loc_info <<< $line
+    sed -i "${loc_info[1]}s/.*/  <!-- SDM845 yeet ${name[-1]} -->/" ${loc_info[0]}
+  done
+
+  cd ../local_manifests
+}
+
 echo -e "### Mini Manifest Editor by Juleast###"
 echo -e "--------------------------------------"
 echo "Select the device:"
@@ -49,19 +65,7 @@ fi
 echo "</manifest>" | tee -a lge_sdm845.xml  &> /dev/null
 echo "Finished!"
 
-echo -e "--------------------------------------"
-
-echo "Try to remove SDM845 CAF HALs from default manifests..."
-cd ../manifests
-
-for hal in ${hals[@]}; do
-  IFS='/' read -r -a name <<< "$(echo $hal)"
-  IFS=' ' read -r -a line <<< "$(grep -nir $hal)"
-  IFS=':' read -r -a loc_info <<< $line
-  sed -i "${loc_info[1]}s/.*/  <!-- SDM845 yeet ${name[-1]} -->/" ${loc_info[0]}
-done
-
-cd ../local_manifests
+#nuke_hal
 
 echo "Done!"
 echo "Note: If you are not sure of the changes, double check the files."
