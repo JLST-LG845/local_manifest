@@ -67,6 +67,10 @@ echo "Finished!"
 
 #nuke_hal
 
+echo "Copying rom.sh script to root of ROM dir..."
+cp rom.sh ../../
+echo "** Make sure to run rom.sh script after running repo sync!"
+
 echo "Done!"
 echo "Note: If you are not sure of the changes, double check the files."
 
